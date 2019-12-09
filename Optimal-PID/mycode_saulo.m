@@ -22,3 +22,9 @@ Gp = series(Gp1, series(Gp2,Gp3))
 % Plot the step response
 figure; plot(T1,Y1,'r-'); grid
 xlabel('Time'); ylabel('Amplitude');
+
+
+[Y2 T2]=myPID_discreto(Kp,Ki,Kd);  % Call PID discreto
+
+figure; plot(T2,Y2,'r-'); grid
+xlabel('Time'); ylabel('Amplitude');
